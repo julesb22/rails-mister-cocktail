@@ -1,5 +1,6 @@
 <h1> <%= @cocktail.name  %></h1>
 
 
-
+<%= link_to "Accéder aux doses" , cocktail_doses_path(params[:id]) %>
+<%= link_to "Back" , cocktails_path %>
 
