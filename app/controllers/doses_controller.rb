@@ -2,7 +2,10 @@ class DosesController < ApplicationController
 
   def index
     @doses = Dose.all
-    @cocktail = Cocktail.find(params[:cocktail_id])
+  end
+
+  def show
+    @dose = Dose.find(params[:id])
   end
 
   def new
