@@ -14,6 +14,8 @@ class DosesController < ApplicationController
     cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new(dose_params)
     @dose.cocktail = cocktail
+    # ingredient = Ingredient.find(params[:ingredient_id])
+    # @dose.ingredient = ingredient
 
  end
 

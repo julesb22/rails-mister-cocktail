@@ -9,19 +9,9 @@ ingredient_array = ingredient["drinks"]
 
   ingredient_array.each do |ingredient|
     ingredient_1 = Ingredient.new(name: ingredient["strIngredient1"])
-    dose = Dose.create(name:"mojito")
-    dose.ingredient = ingredient_1
   end
-
-  dose.ingredient =
-
-  Cocktail.find(34)
 
 
 # p Ingredient.find(34)
-
-
-Cocktail.create(name: "mojito")
-Cocktail.create(name: "cuba libre")
 
 
