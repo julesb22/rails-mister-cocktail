@@ -8,7 +8,7 @@ ingredient = JSON.parse(ingredient_serialized)
 ingredient_array = ingredient["drinks"]
 
   ingredient_array.each do |ingredient|
-    ingredient_1 = Ingredient.new(name: ingredient["strIngredient1"])
+    ingredient_1 = Ingredient.create(name: ingredient["strIngredient1"])
   end
 
 
