@@ -1,0 +1,17 @@
+<h1> Here is the list of all our cocktails </h1>
+
+<div class="btn btn-primary home"> <%= link_to "Add a cocktail", new_cocktail_path  %> </div>
+
+<div class="container">
+  <div class="row">
+<% @cocktails.each do |cocktail|%>
+    <div class="card col-xs-6 col-md-4 ">
+      <div class="top-card"> <%= image_tag "#{cocktail.name}.jpg", alt: "cocktail", width: 200, height:200 %> </div>
+      <div class="bottom-card"><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), :class => 'btn btn-primary' %> </div>
+    </div>
+<% end %>
+ </div>
+</div>
+
+
+

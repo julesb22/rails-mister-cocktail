@@ -1,0 +1,23 @@
+.container {
+  color: rgb(255,255,255);
+}
+
+.card {
+  margin: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-card {
+  background: rgb(0,0,0);
+  width: 200;
+  height:200;
+}
+
+
+.bottom-card {
+  text-align: center;
+  background: rgb(230,230,230);
+}
+
