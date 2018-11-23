@@ -13,6 +13,3 @@ ingredient_array = ingredient["drinks"]
 
 
 
-# p Ingredient.find(34)
-
-
