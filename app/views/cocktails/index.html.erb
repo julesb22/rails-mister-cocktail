@@ -3,14 +3,19 @@
 <div class="btn btn-primary home"> <%= link_to "Add a cocktail", new_cocktail_path  %> </div>
 
 <div class="container">
-  <div class="row">
 <% @cocktails.each do |cocktail|%>
-    <div class="card col-xs-6 col-md-4 ">
-      <div class="top-card"> <%= image_tag "#{cocktail.name}.jpg", alt: "cocktail", width: 200, height:200 %> </div>
-      <div class="bottom-card"><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), :class => 'btn btn-primary' %> </div>
+<div class="card" >
+    <% if cocktail.photo.blank? %>
+    <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2))url('<%= cl_image_path "sample", height: 300, width: 400, crop: :fill %>')">
     </div>
+    <% else %>
+      <div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+               url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+      </div>
+    <% end %>
+  <div class="bottom-card"><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id), :class => 'btn btn-primary' %> </div>
+</div>
 <% end %>
- </div>
 </div>
 
 
