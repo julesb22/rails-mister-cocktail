@@ -12,6 +12,7 @@ ingredient_array = ingredient["drinks"]
   end
 
 
+
 # p Ingredient.find(34)
 
 
